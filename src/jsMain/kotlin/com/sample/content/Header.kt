@@ -30,30 +30,41 @@ private fun Logo() {
     Div(attrs = {
         classes(WtCols.wtColInline)
     }) {
-        A(attrs = {
-            target(ATarget.Blank)
-        }, href = "https://www.jetbrains.com/") {
-            Div(attrs = {
-                classes("jetbrains-logo", "_logo-jetbrains-square", "_size-3")
-            }) {}
-        }
-    }
-}
-
-@Composable
-private fun LanguageButton() {
-    Div(attrs = {
-        classes(WtCols.wtColInline)
-    }) {
-        Button(attrs = {
-            classes(WtTexts.wtButton, WtTexts.wtLangButton)
-            onClick { window.alert("Oops! This feature is yet to be implemented") }
+        Div({
+            classes(WtCols.wtCol2, WtCols.wtColMd3)
+            style {
+                alignSelf(AlignSelf.Start)
+            }
         }) {
-            Img(src = "ic_lang.svg", attrs = { style {
-                paddingLeft(8.px)
-                paddingRight(8.px)
-            }})
-            Text("English")
+            Img(src = "i1.svg", attrs = { classes(AppStylesheet.composeLogo) })
         }
+//        A(attrs = {
+//            target(ATarget.Blank)
+//        }, href = "https://www.jetbrains.com/") {
+//
+//            Div(attrs = {
+//                classes("jetbrains-logo", "_logo-jetbrains-square", "_size-3")
+//            }) {
+//                Img(src = "i1.svg", attrs = { classes(AppStylesheet.composeLogo) })
+//            }
+//        }
     }
 }
+//
+//@Composable
+//private fun LanguageButton() {
+//    Div(attrs = {
+//        classes(WtCols.wtColInline)
+//    }) {
+//        Button(attrs = {
+//            classes(WtTexts.wtButton, WtTexts.wtLangButton)
+//            onClick { window.alert("Oops! This feature is yet to be implemented") }
+//        }) {
+//            Img(src = "ic_lang.svg", attrs = { style {
+//                paddingLeft(8.px)
+//                paddingRight(8.px)
+//            }})
+//            Text("English")
+//        }
+//    }
+//}

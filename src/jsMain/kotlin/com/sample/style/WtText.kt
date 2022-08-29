@@ -222,6 +222,9 @@ object WtTexts : StyleSheet(AppStylesheet) {
         padding(12.px)
         backgroundColor(Color("transparent"))
         display(DisplayStyle.LegacyInlineFlex)
+        color(Color("#167dff"))
+        property("border-bottom", "1px solid transparent")
+        property("text-decoration", "none")
 
         hover(self) style {
             backgroundColor(rgba(255, 255, 255, 0.1))

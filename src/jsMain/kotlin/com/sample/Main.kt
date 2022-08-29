@@ -14,10 +14,11 @@ fun main() {
             Header()
             MainContentLayout {
                 Intro()
-                ComposeWebLibraries()
-                GetStarted()
-                CodeSamples()
-                JoinUs()
+                Experience()
+//                GetStarted()
+//                CodeSamples()
+//                CodeSamples()
+//                JoinUs()
             }
             PageFooter()
         }

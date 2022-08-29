@@ -7,7 +7,6 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import com.sample.components.ContainerInSection
 import com.sample.style.*
-import org.w3c.dom.HTMLElement
 
 @Composable
 fun Intro() {
@@ -34,7 +33,7 @@ fun Intro() {
                 )
             }) {
                 H1(attrs = { classes(WtTexts.wtHero) }) {
-                    Text("Compose for ")
+                    Text("Volodymyr ")
                     Span({
                         classes(WtTexts.wtHero)
                         style {
@@ -42,17 +41,13 @@ fun Intro() {
                             whiteSpace("nowrap")
                         }
                     }) {
-                        Text("Web")
-
-//                        Span(attrs = { classes(AppStylesheet.composeTitleTag) }) {
-//                            Text("Technology preview")
-//                        }
+                        Text("Lavruk")
                     }
                 }
                 Div({
                     classes(WtDisplay.wtDisplayMdNone)
                 }) {
-                    IntroAboutComposeWeb()
+                    IntroAboutMe()
                 }
             }
         }
@@ -61,13 +56,13 @@ fun Intro() {
         Div(attrs = {
             classes(WtDisplay.wtDisplayNone, WtDisplay.wtDisplayMdBlock)
         }) {
-            IntroAboutComposeWeb()
+            IntroAboutMe()
         }
     }
 }
 
 @Composable
-private fun IntroAboutComposeWeb() {
+private fun IntroAboutMe() {
     Div({
         classes(WtRows.wtRow, WtRows.wtRowSizeM)
     }) {
@@ -76,38 +71,35 @@ private fun IntroAboutComposeWeb() {
             classes(WtCols.wtCol9, WtCols.wtColMd9, WtCols.wtColSm12)
         }) {
             P({ classes(WtTexts.wtSubtitle2, WtOffsets.wtTopOffset24) }) {
-                Text("Reactive web UIs for Kotlin, based on Google's ")
+                Text("Building modern reactive mobile applications with Kotlin and Google's ")
 
                 A(href = "https://developer.android.com/jetpack/compose", attrs = {
                     classes(WtTexts.wtLink)
                     target(ATarget.Blank)
                 }) {
-                    Text("modern toolkit")
+                    Text("Jetpack Compose")
                 }
-
-                Text(" and brought to you by JetBrains")
+                Text(" modern UI toolkit")
             }
 
             P({
                 classes(WtTexts.wtText1, WtOffsets.wtTopOffset24)
             }) {
             Text(
-                "Compose for Web simplifies and accelerates UI development for web applications, " +
-                        "and aims to enable UI code sharing between web, desktop, and Android applications " +
-                        "in the future."
+                "I'm a software engineer with over 15 years of experience building primarily mobile apps from the scratch using best-in-class tools and practices."
             )
         }
 
             //ComposeWebStatusMessage()
 
-            IntroCodeSample()
+//            IntroCodeSample()
 
             A(
                 attrs = {
                     classes(WtTexts.wtButton, WtOffsets.wtTopOffset24)
                     target(ATarget.Blank)
                 },
-                href = "https://github.com/jetbrains/compose-jb"
+                href = "https://github.com/lavruk"
             ) {
                 Text("Explore on GitHub")
             }

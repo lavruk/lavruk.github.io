@@ -37,7 +37,7 @@ fun PageFooter() {
                         P({
                             classes(WtTexts.wtText1, WtTexts.wtText1ThemeDark)
                         }) {
-                            Text("Follow us")
+                            Text("Contacts:")
                         }
                     }
 
@@ -67,7 +67,7 @@ private fun CopyrightInFooter() {
         Span({
             classes(WtTexts.wtText3, WtTexts.wtTextPale)
         }) {
-            Text("Copyright © 2000-2021  JetBrains s.r.o.")
+            Text("Copyright © 2000-2021  Lavruk")
         }
 
         Span({
@@ -84,7 +84,18 @@ private fun SocialIconLink(link: SocialLink) {
         classes(WtTexts.wtSocialButtonItem)
         target(ATarget.Blank)
     }, href = link.url) {
-        Img(src = link.iconSvg) {}
+        Img(src = link.iconSvg, attrs = {
+            attr("width", "24")
+            attr("height", "24")
+        })
+        Div({
+            classes(WtTexts.wtText1, WtTexts.wtText1ThemeDark)
+            style {
+                padding(0.px, 12.px)
+            }
+        }) {
+            Text(link.title)
+        }
     }
 }
 
@@ -97,17 +108,13 @@ private data class SocialLink(
 
 private fun getSocialLinks(): List<SocialLink> {
     return listOf(
-        SocialLink("facebook", "https://www.facebook.com/JetBrains", "JetBrains on Facebook", "ic_fb.svg"),
-        SocialLink("twitter", "https://twitter.com/jetbrains", "JetBrains on Twitter", "ic_twitter.svg"),
+        SocialLink("email", "mailto:volodymyr.lavruk@gmail.com", "Email", "ic_mail.svg"),
+        SocialLink("phone", "tel:+12258007468", "Phone", "ic_phone.svg"),
         SocialLink(
             "linkedin",
-            "https://www.linkedin.com/company/jetbrains",
-            "JetBrains on Linkedin",
+            "https://www.linkedin.com/in/lavruk",
+            "Linkedin",
             "ic_linkedin.svg"
         ),
-        SocialLink("youtube", "https://www.youtube.com/user/JetBrainsTV", "JetBrains on YouTube", "ic_youtube.svg"),
-        SocialLink("instagram", "https://www.instagram.com/jetbrains/", "JetBrains on Instagram", "ic_insta.svg"),
-        SocialLink("blog", "https://blog.jetbrains.com/", "JetBrains blog", "ic_jb_blog.svg"),
-        SocialLink("rss", "https://blog.jetbrains.com/feed/", "JetBrains RSS Feed", "ic_feed.svg"),
     )
 }
